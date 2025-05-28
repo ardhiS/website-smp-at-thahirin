@@ -1,101 +1,134 @@
 /* src/components/Navbar/Navbar.css */
 .navbar {
-  background-color: #ffffff; /* Warna putih untuk navbar */
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan halus */
-  position: fixed; /* Membuat navbar tetap di atas saat scroll */
+  background-color: #ffffff; /* Navbar putih */
+  padding: 0.8rem 0; /* Sesuaikan padding vertikal */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Pastikan navbar selalu di atas konten lain */
+  z-index: 1000;
 }
 
 .navbar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* .container class dari index.css akan menangani max-width dan padding horizontal */
 }
 
 .navbar-brand {
-  color: #2c3e50; /* Warna brand yang lebih gelap */
+  color: #2c3e50; /* Warna brand (biru tua/abu) */
   text-decoration: none;
-  font-size: 1.8rem; /* Perbesar sedikit */
+  font-size: 1.4rem; /* Sesuaikan ukuran brand */
   font-weight: bold;
 }
 
-.navbar-brand:hover {
-  color: #1a252f;
-  text-decoration: none;
-}
-
+/* Links untuk Desktop */
 .navbar-links {
   list-style: none;
-  display: flex;
-  gap: 1.5rem; /* Jarak antar link */
+  display: flex; /* Default untuk desktop */
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .navbar-links li a {
-  color: #34495e; /* Warna link navbar */
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 0;
-  position: relative; /* Untuk efek hover */
-}
-
-.navbar-links li a:hover {
-  color: #007bff; /* Warna saat hover */
-  text-decoration: none;
-}
-
-/* Efek garis bawah saat hover (opsional) */
-.navbar-links li a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #007bff;
-  transition: width 0.3s ease;
-}
-
-.navbar-links li a:hover::after {
-  width: 100%;
-}
-
-.navbar-links li a {
-  /* Style default untuk link */
-  color: #34495e;
+  color: #4a5568; /* Abu-abu sedikit lebih gelap untuk teks link */
   text-decoration: none;
   font-weight: 500;
   padding: 0.5rem 0;
   position: relative;
-  transition: color 0.2s ease-in-out; /* Transisi warna */
+  transition: color 0.2s ease-in-out;
 }
 
 .navbar-links li a:hover {
-  color: #007bff;
-  text-decoration: none;
+  color: #007bff; /* Warna aksen (biru) */
 }
 
-/* Style untuk NavLink yang aktif */
 .navbar-links li a.active {
-  color: #007bff; /* Warna untuk link aktif */
-  font-weight: bold; /* Membuat teks lebih tebal */
+  color: #007bff; /* Warna aksen (biru) */
+  font-weight: bold;
 }
 
-/* Efek garis bawah untuk link aktif (dan bisa juga untuk hover jika mau) */
 .navbar-links li a.active::after,
 .navbar-links li a:hover::after {
-  /* Menggabungkan hover dan aktif untuk garis bawah */
   content: '';
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: -2px; /* Sedikit di bawah teks */
+  bottom: -2px;
   left: 0;
-  background-color: #007bff;
+  background-color: #007bff; /* Warna aksen (biru) */
   transition: width 0.3s ease;
+}
+
+/* Tombol Hamburger & Menu Mobile */
+.mobile-menu-toggle {
+  display: none; /* Sembunyikan di desktop */
+  background: none;
+  border: none;
+  color: #2c3e50; /* Warna ikon hamburger, senada dengan brand */
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1002; /* Di atas menu dropdown */
+}
+
+@media (max-width: 768px) {
+  /* Breakpoint untuk mobile */
+  .navbar-brand {
+    font-size: 1.2rem; /* Sedikit perkecil brand di mobile */
+  }
+
+  .mobile-menu-toggle {
+    display: block; /* Tampilkan tombol hamburger */
+  }
+
+  .navbar-links {
+    display: none; /* Sembunyikan list link horizontal */
+    /* Style di bawah ini berlaku saat .mobile-menu-open ditambahkan */
+  }
+
+  .navbar-links.mobile-menu-open {
+    display: flex; /* Tampilkan menu sebagai flex container */
+    flex-direction: column; /* Susun item vertikal */
+    position: absolute;
+    top: 100%; /* Tepat di bawah navbar */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* Latar belakang menu dropdown */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    z-index: 1001;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .navbar-links.mobile-menu-open li {
+    width: 100%;
+    text-align: left; /* Teks link rata kiri */
+  }
+
+  .navbar-links.mobile-menu-open li a {
+    display: block;
+    padding: 0.8rem 1.5rem; /* Padding untuk setiap item link */
+    color: #4a5568; /* Warna teks link */
+    border-bottom: 1px solid #f0f0f0; /* Garis pemisah */
+  }
+  .navbar-links.mobile-menu-open li:last-child a {
+    border-bottom: none; /* Hapus border di item terakhir */
+  }
+
+  .navbar-links.mobile-menu-open li a.active,
+  .navbar-links.mobile-menu-open li a:hover {
+    background-color: #e9f5ff; /* Warna highlight biru muda */
+    color: #007bff; /* Warna teks biru */
+  }
+
+  /* Sembunyikan garis bawah ::after di mobile untuk dropdown */
+  .navbar-links.mobile-menu-open li a.active::after,
+  .navbar-links.mobile-menu-open li a:hover::after {
+    display: none;
+  }
 }

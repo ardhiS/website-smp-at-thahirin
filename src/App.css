@@ -12,6 +12,10 @@
 */
 
 /* Style baru untuk layout flex */
+body {
+  /* ... style body lainnya ... */
+  overflow-x: hidden; /* Menyembunyikan scroll horizontal */
+}
 .app-layout {
   display: flex;
   flex-direction: column;

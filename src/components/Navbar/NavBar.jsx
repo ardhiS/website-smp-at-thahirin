@@ -1,14 +1,15 @@
 // src/components/Navbar/Navbar.jsx
-import React from 'react';
-// GANTI 'Link' menjadi 'NavLink' dan tambahkan 'useLocation'
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
+// Jika Anda tidak menggunakan react-icons, Anda bisa menggunakan karakter HTML:
+// const hamburgerIcon = <span>☰</span>;
+// const closeIcon = <span>×</span>;
 
-// Navbarya udh di ubah tap belm berubah juga
 const Navbar = () => {
-  // Dapatkan informasi lokasi saat ini
+  const location = useLocation();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Definisikan link navigasi dalam bentuk array objek agar lebih mudah dikelola
   const navLinks = [
     { path: '/', label: 'Beranda' },
     { path: '/tentang-kami', label: 'Tentang Kami' },
@@ -18,20 +19,41 @@ const Navbar = () => {
     { path: '/kontak', label: 'Kontak' },
   ];
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false); // Tutup menu saat navigasi
+  }, [location]);
+
   return (
     <nav className='navbar'>
       <div className='container navbar-content'>
         <NavLink to='/' className='navbar-brand'>
           SMP PLUS AT-THAHIRIN
         </NavLink>
-        <ul className='navbar-links'>
+
+        <button
+          className='mobile-menu-toggle'
+          onClick={toggleMobileMenu}
+          aria-expanded={isMobileMenuOpen}
+          aria-label='Toggle navigation'
+        >
+          {isMobileMenuOpen ? <span>×</span> : <span>☰</span>}
+        </button>
+
+        <ul
+          className={`navbar-links ${
+            isMobileMenuOpen ? 'mobile-menu-open' : ''
+          }`}
+        >
           {navLinks.map((link) => (
             <li key={link.path}>
-              {/* Gunakan NavLink, ia akan otomatis menambahkan class 'active' */}
               <NavLink
                 to={link.path}
-                // className={({ isActive }) => isActive ? "nav-link active" : "nav-link"} // Cara manual jika tidak pakai style default NavLink
-                // Atau biarkan NavLink menangani class 'active' secara otomatis
+                className={({ isActive }) => (isActive ? 'active' : '')}
+                onClick={() => isMobileMenuOpen && toggleMobileMenu()}
               >
                 {link.label}
               </NavLink>
