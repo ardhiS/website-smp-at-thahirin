@@ -1,7 +1,7 @@
 // src/pages/GalleryPage/GalleryPage.jsx
 import React, { useState } from 'react';
 import { schoolProfile } from '../../data/mockSchoolData';
-import './GalleryPage.css'; // Kita akan buat file CSS ini
+import './Gallerypage.css'; // Kita akan buat file CSS ini
 
 const GalleryPage = () => {
   const galleryData = schoolProfile.gallery;
