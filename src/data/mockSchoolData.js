@@ -1,3 +1,4 @@
+import { FaTree } from 'react-icons/fa';
 // src/data/mockSchoolData.js
 // Pastikan Anda import path gambar dengan benar atau gunakan string path langsung
 // Jika menggunakan Vite, path relatif dari folder public atau import langsung bisa bekerja.
@@ -14,24 +15,24 @@ export const schoolProfile = {
   featuredPrograms: [
     {
       id: 1,
-      title: "Tahfidz Al-Qur'an",
+      title: 'Pramuka',
       description:
-        "Program unggulan menghafal Al-Qur'an dengan target minimal 3 juz selama masa studi.",
-      icon: ' قرآن ', // Anda bisa ganti dengan icon atau path gambar nanti
+        'Pramuka adalah program yang mengajarkan keterampilan dan kepemimpinan melalui kegiatan luar ruangan.',
+      icon: '🥥', // Anda bisa ganti dengan icon atau path gambar nanti
     },
     {
       id: 2,
-      title: 'Pembelajaran Berbasis IT',
+      title: 'Paskibra',
       description:
-        'Integrasi teknologi dalam proses belajar mengajar untuk menyiapkan siswa menghadapi era digital.',
-      icon: '💻',
+        'Paskibra adalah program yang mengembangkan keterampilan baris berbaris dan kedisiplinan diri.',
+      icon: '👮‍♂️',
     },
     {
       id: 3,
-      title: 'Ekstrakurikuler Variatif',
+      title: 'Silat',
       description:
-        'Berbagai pilihan ekstrakurikuler untuk mengembangkan minat dan bakat siswa.',
-      icon: '⚽🎨',
+        'Berbagai pilihan ekstrakurikuler untuk mengembangkan minat dan bakat siswa terutama dalam bela diri',
+      icon: '🥋',
     },
   ],
   latestNews: [
