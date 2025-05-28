@@ -1,7 +1,7 @@
 // src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar/NavBar';
 import Footer from './components/Footer/Footer';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import HomePage from './pages/HomePage/HomePage';

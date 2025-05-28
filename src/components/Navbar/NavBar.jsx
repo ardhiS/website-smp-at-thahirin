@@ -4,6 +4,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
+// Navbarya udh di ubah tap belm berubah juga
 const Navbar = () => {
   // Dapatkan informasi lokasi saat ini
 
