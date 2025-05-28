@@ -1,7 +1,7 @@
 // src/pages/PpdbPage/PpdbPage.jsx
 import React from 'react';
 import { schoolProfile } from '../../data/mockSchoolData';
-import './PpdbPage.css'; // Kita akan buat file CSS ini
+import './Ppdbpage.css'; // Kita akan buat file CSS ini
 
 const PpdbPage = () => {
   const ppdbData = schoolProfile.ppdb;
