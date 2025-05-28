@@ -99,20 +99,3 @@
   background-color: #007bff;
   transition: width 0.3s ease;
 }
-
-/* Jika ingin garis bawah hanya untuk yang aktif dan bukan hover */
-/*
-.navbar-links li a.active::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: #007bff;
-}
-*/
-
-/* Jika sebelumnya sudah ada ::after untuk hover, sesuaikan agar tidak konflik */
-/* Jika Anda menggunakan ::after untuk hover sebelumnya, hapus atau gabungkan seperti di atas */
-/* .navbar-links li a:hover::after { ... }  <-- ini mungkin sudah ada, sesuaikan */

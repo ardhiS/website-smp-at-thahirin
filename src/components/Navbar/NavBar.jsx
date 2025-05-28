@@ -1,11 +1,11 @@
 // src/components/Navbar/Navbar.jsx
 import React from 'react';
 // GANTI 'Link' menjadi 'NavLink' dan tambahkan 'useLocation'
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
-  const location = useLocation(); // Dapatkan informasi lokasi saat ini
+  // Dapatkan informasi lokasi saat ini
 
   // Definisikan link navigasi dalam bentuk array objek agar lebih mudah dikelola
   const navLinks = [

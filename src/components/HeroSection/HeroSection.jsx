@@ -2,12 +2,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HeroSection.css';
+import HeroImg from '../../assets/images/Hero.jpg';
 // import heroImage from '../../assets/images/mock-hero-image.jpg'; // Siapkan gambar di src/assets/images/
 
 const HeroSection = () => {
   return (
     <div
-      className='hero-section' /* style={{ backgroundImage: `url(${heroImage})` }} */
+      className='hero-section'
+      style={{ backgroundImage: `url(${HeroImg})` }}
     >
       <div className='hero-overlay'></div>
       <div className='container hero-content'>

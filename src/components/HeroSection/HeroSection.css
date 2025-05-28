@@ -1,14 +1,14 @@
 /* src/components/HeroSection/HeroSection.css */
 .hero-section {
-  background-color: #4a90e2; /* Warna fallback jika tidak ada gambar */
-  /* background-image: url('path-to-your-image.jpg'); uncomment dan ganti jika ada gambar */
-  background-size: cover;
-  background-position: center;
-  color: white;
+  background-size: cover; /* Membuat gambar menutupi seluruh area, mungkin terpotong */
+  background-position: center -58px; /* Memusatkan gambar */
+  background-repeat: no-repeat; /* Mencegah gambar berulang */
+
+  color: white; /* Warna teks di atas gambar */
   text-align: center;
-  padding: 80px 20px; /* Sesuaikan padding */
-  position: relative;
-  min-height: 70vh; /* Tinggi hero section */
+  padding: 100px 20px; /* Sesuaikan padding agar konten tidak terlalu mepet tepi */
+  position: relative; /* Diperlukan untuk positioning overlay */
+  min-height: 70vh; /* Atau tinggi spesifik seperti 400px, 500px */
   display: flex;
   align-items: center;
   justify-content: center;
