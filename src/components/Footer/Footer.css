@@ -1,0 +1,21 @@
+/* src/components/Footer/Footer.css */
+.footer {
+  background-color: #2c3e50; /* Warna footer yang lebih gelap */
+  color: #ecf0f1; /* Warna teks yang kontras */
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 3rem; /* Beri jarak dari konten di atasnya */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #3498db; /* Warna link di footer */
+}
+
+.footer a:hover {
+  color: #5dade2;
+}

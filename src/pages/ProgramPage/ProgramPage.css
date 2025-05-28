@@ -1,0 +1,152 @@
+/* src/pages/ProgramPage/ProgramPage.css */
+.program-page {
+  padding-bottom: 40px;
+}
+
+.program-section {
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+/* Menggunakan kembali style .sub-section-title dari AboutPage.css jika sudah global, */
+/* Jika belum, definisikan di sini atau di App.css/index.css */
+.sub-section-title {
+  /* Pastikan style ini konsisten atau di-override jika perlu */
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f5a623;
+  display: inline-block;
+}
+
+.program-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.sub-heading {
+  font-size: 1.3rem;
+  color: #34495e;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.integrated-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.integrated-item {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Styling untuk Program Unggulan (mirip HomePage, tapi dengan class berbeda untuk kustomisasi) */
+.featured-programs-section-alt {
+  background-color: #f9f9f9; /* Sedikit beda dari section lain */
+}
+.programs-grid {
+  /* Bisa pakai style .programs-grid dari HomePage.css jika cocok */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.program-card-alt {
+  /* Mirip .program-card tapi bisa di-override */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+.program-card-alt:hover {
+  transform: translateY(-4px);
+}
+.program-icon-alt {
+  font-size: 2.5rem;
+  color: #4a90e2;
+  margin-bottom: 12px;
+}
+.program-title-alt {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+.program-description-alt {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Styling untuk Ekstrakurikuler */
+.extracurricular-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.extracurricular-card {
+  background-color: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.eko-icon {
+  /* Jika Anda menambahkan icon untuk ekstrakurikuler */
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #007bff; /* Contoh warna */
+  text-align: center;
+}
+
+.eko-name {
+  font-size: 1.3rem;
+  color: #343a40;
+  margin-bottom: 8px;
+}
+
+.eko-category {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.eko-category strong {
+  font-style: normal;
+}
+
+.eko-description {
+  font-size: 0.95rem;
+  color: #495057;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  flex-grow: 1; /* Membuat deskripsi mengisi ruang jika kartu tidak sama tinggi */
+}
+
+.eko-schedule {
+  font-size: 0.85rem;
+  color: #28a745; /* Warna hijau untuk jadwal */
+  font-weight: 500;
+}
+.eko-schedule strong {
+  color: #495057;
+}

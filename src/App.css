@@ -1,0 +1,57 @@
+/* src/App.css */
+
+/* Hapus atau komentari .app-main-content lama jika ada */
+/*
+.app-main-content {
+  padding-top: 80px;
+  padding-bottom: 2rem;
+  min-height: calc(100vh - 80px - 100px);
+}
+.page-title { ... }
+.page-subtitle { ... }
+*/
+
+/* Style baru untuk layout flex */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Layout utama minimal setinggi viewport */
+}
+
+.app-main-content {
+  flex-grow: 1; /* KUNCI: Ini membuat <main> mengisi sisa ruang vertikal */
+  padding-top: 80px; /* Sesuaikan dengan tinggi Navbar Anda. Contoh dari App.css sebelumnya */
+  display: flex; /* Agar children dari main (yaitu Routes->Page) bisa diatur juga */
+  flex-direction: column; /* Konten halaman akan tersusun vertikal di dalam main */
+}
+
+/* Styling untuk div.container yang membungkus halaman-halaman normal */
+.app-main-content > .container.page-content-wrapper {
+  width: 100%; /* Mengambil lebar penuh dari parent (main) */
+  max-width: 1200px; /* Batas lebar konten seperti .container global Anda */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* Padding horizontal standar */
+  padding-right: 1rem;
+  padding-bottom: 2rem; /* Jarak di bawah konten halaman normal sebelum footer */
+  /* Jika halaman normal juga butuh mengisi tinggi: */
+  /* display: flex; flex-direction: column; flex-grow: 1; */
+  /* Tapi biasanya tidak perlu karena kontennya sudah panjang */
+}
+
+/* Pastikan .page-title dan .page-subtitle masih berfungsi jika Anda menggunakannya di dalam halaman */
+/* Atau jika Anda sudah mendefinisikannya per halaman, itu lebih baik. */
+.page-title {
+  /* Contoh, jika masih global */
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.page-subtitle {
+  /* Contoh, jika masih global */
+  font-size: 1.1rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}

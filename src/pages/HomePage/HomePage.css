@@ -1,0 +1,142 @@
+/* src/pages/HomePage/HomePage.css */
+.home-section {
+  padding: 40px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  position: relative; /* Untuk garis bawah dekoratif */
+}
+
+/* Garis bawah dekoratif untuk judul seksi */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #f5a623; /* Warna aksen */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Sambutan Kepala Sekolah */
+.welcome-section {
+  background-color: #ffffff; /* Latar belakang putih untuk kontras */
+}
+.welcome-content {
+  display: flex;
+  flex-direction: column; /* Default susunan mobile */
+  align-items: center;
+  gap: 20px;
+  text-align: center; /* Teks rata tengah di mobile */
+}
+.headmaster-photo {
+  /* Style jika ada foto kepsek */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.welcome-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 800px; /* Batasi lebar teks sambutan */
+  margin: 0 auto;
+}
+
+/* Program Unggulan */
+.featured-programs-section {
+  background-color: #f9f9f9; /* Latar belakang sedikit berbeda */
+}
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsive grid */
+  gap: 30px;
+}
+.program-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.program-icon {
+  font-size: 3rem; /* Ukuran icon */
+  color: #4a90e2; /* Warna icon */
+  margin-bottom: 15px;
+}
+.program-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+.program-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Berita Terbaru */
+.latest-news-section {
+  background-color: #ffffff;
+}
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.news-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.news-title {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+.news-date {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+.news-summary {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.news-readmore {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.news-readmore:hover {
+  text-decoration: underline;
+}
+
+/* Penyesuaian untuk tablet dan desktop */
+@media (min-width: 768px) {
+  .welcome-content {
+    flex-direction: row; /* Susunan horizontal di desktop */
+    text-align: left; /* Teks rata kiri di desktop */
+  }
+  .headmaster-photo {
+    margin-right: 30px; /* Jarak foto dengan teks */
+  }
+}

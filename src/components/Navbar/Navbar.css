@@ -1,0 +1,118 @@
+/* src/components/Navbar/Navbar.css */
+.navbar {
+  background-color: #ffffff; /* Warna putih untuk navbar */
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+  position: fixed; /* Membuat navbar tetap di atas saat scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Pastikan navbar selalu di atas konten lain */
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  color: #2c3e50; /* Warna brand yang lebih gelap */
+  text-decoration: none;
+  font-size: 1.8rem; /* Perbesar sedikit */
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  color: #1a252f;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem; /* Jarak antar link */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #34495e; /* Warna link navbar */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative; /* Untuk efek hover */
+}
+
+.navbar-links li a:hover {
+  color: #007bff; /* Warna saat hover */
+  text-decoration: none;
+}
+
+/* Efek garis bawah saat hover (opsional) */
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+.navbar-links li a {
+  /* Style default untuk link */
+  color: #34495e;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.2s ease-in-out; /* Transisi warna */
+}
+
+.navbar-links li a:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Style untuk NavLink yang aktif */
+.navbar-links li a.active {
+  color: #007bff; /* Warna untuk link aktif */
+  font-weight: bold; /* Membuat teks lebih tebal */
+}
+
+/* Efek garis bawah untuk link aktif (dan bisa juga untuk hover jika mau) */
+.navbar-links li a.active::after,
+.navbar-links li a:hover::after {
+  /* Menggabungkan hover dan aktif untuk garis bawah */
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px; /* Sedikit di bawah teks */
+  left: 0;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+/* Jika ingin garis bawah hanya untuk yang aktif dan bukan hover */
+/*
+.navbar-links li a.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #007bff;
+}
+*/
+
+/* Jika sebelumnya sudah ada ::after untuk hover, sesuaikan agar tidak konflik */
+/* Jika Anda menggunakan ::after untuk hover sebelumnya, hapus atau gabungkan seperti di atas */
+/* .navbar-links li a:hover::after { ... }  <-- ini mungkin sudah ada, sesuaikan */

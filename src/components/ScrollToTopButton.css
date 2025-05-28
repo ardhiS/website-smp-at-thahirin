@@ -1,0 +1,32 @@
+/* src/components/ScrollToTopButton/ScrollToTopButton.css */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000; /* Pastikan di atas konten lain kecuali mungkin modal sangat penting */
+}
+
+.scroll-to-top button {
+  background-color: #007bff; /* Warna biru yang konsisten */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Membuat tombol bulat */
+  width: 50px;
+  height: 50px;
+  font-size: 1.8rem; /* Ukuran panah/ikon */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-to-top button:hover {
+  background-color: #0056b3; /* Warna biru lebih gelap saat hover */
+  transform: translateY(-2px);
+}
+
+.scroll-to-top button:active {
+  transform: translateY(0px);
+}

@@ -1,0 +1,65 @@
+/* src/pages/NotFoundPage/NotFoundPage.css */
+.not-found-page {
+  display: flex; /* Aktifkan flexbox untuk .not-found-page */
+  flex-direction: column;
+  align-items: center; /* Tengah secara horizontal */
+  justify-content: center; /* Tengah secara vertikal */
+  flex-grow: 1; /* KUNCI: Agar .not-found-page mengisi sisa ruang di .app-main-content */
+  text-align: center;
+  padding: 40px 20px; /* Padding di dalam .not-found-page */
+  background-color: #f8f9fa; /* Latar belakang yang lembut (opsional, bisa transparan) */
+  width: 100%; /* Memastikan mengambil lebar penuh dari parent (main) */
+}
+
+/* HAPUS baris ini jika ada: */
+/* min-height: calc(100vh - 200px); */
+
+.not-found-content {
+  max-width: 600px;
+}
+
+.not-found-image {
+  max-width: 300px;
+  margin-bottom: 30px;
+}
+
+.not-found-title {
+  font-size: 6rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+.not-found-subtitle {
+  font-size: 2rem;
+  color: #343a40;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.not-found-text {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.not-found-button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.not-found-button:hover {
+  background-color: #0056b3;
+  color: white;
+  text-decoration: none;
+}
