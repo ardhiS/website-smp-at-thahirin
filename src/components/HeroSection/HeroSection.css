@@ -1,7 +1,7 @@
 /* src/components/HeroSection/HeroSection.css */
 .hero-section {
   background-size: cover; /* Membuat gambar menutupi seluruh area, mungkin terpotong */
-  background-position: center -58px; /* Memusatkan gambar */
+  background-position: center -100px; /* Memusatkan gambar */
   background-repeat: no-repeat; /* Mencegah gambar berulang */
 
   color: white; /* Warna teks di atas gambar */
