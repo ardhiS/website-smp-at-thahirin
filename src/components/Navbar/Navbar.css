@@ -17,16 +17,6 @@
   /* .container class dari index.css akan menangani max-width dan padding horizontal */
 }
 
-.navbar-brand {
-  background: linear-gradient(135deg, rgb(109, 214, 255), #ffd700);
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-weight: bold;
-  text-decoration: none !important;
-  font-size: 2.8rem; /* Sesuaikan ukuran brand */
-  font-weight: bold;
-}
-
 /* Links untuk Desktop */
 .navbar-links {
   list-style: none;
@@ -77,6 +67,69 @@
   cursor: pointer;
   padding: 0.5rem;
   z-index: 1002; /* Di atas menu dropdown */
+}
+
+/* Styling untuk navbar brand dengan logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 6rem;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-brand:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+/* Styling untuk logo */
+.navbar-logo {
+  height: 60px;
+  width: 60px;
+  margin-right: 12px;
+  object-fit: contain;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Styling untuk teks brand */
+.navbar-brand-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(17, 176, 250);
+  letter-spacing: 0.5px;
+}
+
+/* Responsive untuk mobile */
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 50px;
+    width: 50px;
+    margin-right: 8px;
+  }
+
+  .navbar-brand-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo {
+    height: 30px;
+    width: 30px;
+    margin-right: 6px;
+  }
+
+  .navbar-brand-text {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -133,11 +186,5 @@
   .navbar-links.mobile-menu-open li a.active::after,
   .navbar-links.mobile-menu-open li a:hover::after {
     display: none;
-  }
-}
-
-@media (min-width: 768px) {
-  .navbar-brand {
-    font-size: 1.6rem; /* Sedikit perkecil brand di mobile */
   }
 }

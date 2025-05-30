@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import './Navbar.css';
+import logo from '../../assets/icons/logo.svg';
 // Jika Anda tidak menggunakan react-icons, Anda bisa menggunakan karakter HTML:
 // const hamburgerIcon = <span>☰</span>;
 // const closeIcon = <span>×</span>;
@@ -31,7 +32,12 @@ const Navbar = () => {
     <nav className='navbar'>
       <div className='container navbar-content'>
         <NavLink to='/' className='navbar-brand'>
-          SMP PLUS AT-THAHIRIN
+          <img
+            src={logo}
+            alt='Logo SMP Plus At-Thahirin'
+            className='navbar-logo'
+          />
+          <span className='navbar-brand-text'>SMP PLUS AT-THAHIRIN</span>
         </NavLink>
 
         <button
