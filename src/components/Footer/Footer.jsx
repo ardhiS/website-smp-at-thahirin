@@ -14,7 +14,8 @@ const Footer = () => {
           © {new Date().getFullYear()} SMP PLUS AT-THAHIRIN. All Rights
           Reserved.
         </p>
-        <p>Website ini sedang dalam tahap pengembangan.</p>{' '}
+        <p>Website ini sedang dalam tahap pengembangan. </p>
+        <p>Made by Ole</p>
         {/* Contoh tambahan */}
       </div>
     </footer>

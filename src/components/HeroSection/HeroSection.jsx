@@ -13,9 +13,13 @@ const HeroSection = () => {
     >
       <div className='hero-overlay'></div>
       <div className='container hero-content'>
-        <h1 className='hero-title'>Selamat Datang di {schoolProfile.name}</h1>
+        <h1 className='hero-title'>
+          <i className='hero-title__selamat-datang'>Selamat Datang di</i>
+          <br />
+          <i className='hero-title__smp-atthahirin'> {schoolProfile.name}</i>
+        </h1>
         <p className='hero-subtitle'>
-          Mencetak Generasi Unggul, Berprestasi, dan Berakhlak Mulia
+          "Mencetak Generasi Unggul, Berprestasi, dan Berakhlak Mulia"
         </p>
         <Link to='/ppdb' className='hero-cta-button'>
           Daftar Sekarang
