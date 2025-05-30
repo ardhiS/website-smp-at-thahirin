@@ -87,20 +87,47 @@
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .hero-section {
+    background-size: cover;
+    background-position: center center;
+    padding: 60px 15px;
+    min-height: 50vh; /* Kurangi tinggi untuk mobile */
+    height: 50vh; /* Set tinggi tetap untuk mobile */
+    overflow: hidden; /* Sembunyikan bagian gambar yang berlebih */
+  }
+
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .hero-title__selamat-datang {
     font-size: 1rem;
   }
   .hero-title__smp-atthahirin {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
   .hero-subtitle {
     font-size: 1rem;
   }
+}
+
+/* Untuk layar yang sangat kecil */
+@media (max-width: 480px) {
   .hero-section {
-    padding: 60px 15px;
-    min-height: 60vh;
+    background-size: cover;
+    background-position: center center;
+    padding: 40px 10px;
+    min-height: 40vh;
+    height: 40vh;
+    overflow: hidden;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-title__smp-atthahirin {
+    font-size: 1.2rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
   }
 }
