@@ -11,7 +11,7 @@ import PpdbPage from './pages/PpdbPage/PpdbPage';
 import GalleryPage from './pages/GalleryPage/GalleryPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
-import ScrollToTop from './components/scrollToTop';
+import ScrollToTop from './components/ScrollToTop';
 
 import './App.css';
 
