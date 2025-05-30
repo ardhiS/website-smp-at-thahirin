@@ -2,11 +2,15 @@ import { FaTree } from 'react-icons/fa';
 // src/data/mockSchoolData.js
 // Pastikan Anda import path gambar dengan benar atau gunakan string path langsung
 // Jika menggunakan Vite, path relatif dari folder public atau import langsung bisa bekerja.
-import galleryImage1 from '../assets/images/1.png'; // Ganti dengan nama file Anda
-import galleryImage2 from '../assets/images/2.jpg';
-import galleryImage3 from '../assets/images/3.png';
-import galleryImage4 from '../assets/images/1.png';
-import galleryImage5 from '../assets/images/2.jpg';
+import galleryImage1 from '../assets/images/12.jpg'; // Ganti dengan nama file Anda
+import galleryImage2 from '../assets/images/11.jpg';
+import galleryImage3 from '../assets/images/14.jpg';
+import galleryImage4 from '../assets/images/4.jpg';
+import galleryImage5 from '../assets/images/5.jpg';
+import galleryImage7 from '../assets/images/7.jpg';
+import galleryImage8 from '../assets/images/8.jpg';
+import galleryImage9 from '../assets/images/9.jpg';
+import galleryImage10 from '../assets/images/angkatan 18.jpg';
 
 export const schoolProfile = {
   name: 'SMP PLUS AT-THAHIRIN',
@@ -204,36 +208,50 @@ export const schoolProfile = {
       {
         id: 'p001',
         src: galleryImage1, // Gunakan variabel hasil import
-        alt: 'Kegiatan Belajar Mengajar di Kelas',
+        alt: 'Memperingati Hari Kartini',
         caption:
-          'Suasana belajar yang interaktif dan menyenangkan di dalam kelas.',
+          'Memperingati Hari Kartini dengan kegiatan menanam pohon dan membaca puisi.',
       },
       {
         id: 'p002',
         src: galleryImage2,
-        alt: 'Kegiatan Pramuka Mingguan',
-        caption: 'Latihan baris-berbaris dan yel-yel dalam kegiatan Pramuka.',
+        alt: 'Bakti Sosial',
+        caption:
+          'Siswa-siswi aktif dalam kegiatan bakti sosial di lingkungan sekitar.',
       },
       {
         id: 'p003',
         src: galleryImage3,
-        alt: 'Prestasi Siswa dalam Lomba Cerdas Cermat',
+        alt: 'Guru Memperingati Hari Kartini',
         caption:
-          'Siswa SMP PLUS AT-THAHIRIN meraih juara dalam Lomba Cerdas Cermat tingkat kota.',
+          'Guru-guru aktif dalam memperingati Hari Kartini dengan kegiatan menanam pohon.',
       },
       {
         id: 'p004',
         src: galleryImage4,
-        alt: 'Fasilitas Laboratorium Komputer',
-        caption:
-          'Laboratorium komputer yang modern untuk mendukung pembelajaran berbasis IT.',
+        alt: 'Maulid Nabi Di Pimpin Oleh Bpk Jaelani S.Pd',
+        caption: 'Maulid Nabi Di Pimpin Oleh Bpk Jaelani S.Pd',
       },
       {
         id: 'p005',
         src: galleryImage5,
-        alt: 'Perayaan Hari Besar Islam',
+        alt: 'Halal Bihalal',
         caption:
-          'Siswa-siswi antusias mengikuti kegiatan perayaan Maulid Nabi Muhammad SAW.',
+          'Siswa-siswi melakukan halal bihalal dengan guru SMP PLUS AT-THAHIRIN',
+      },
+      {
+        id: 'p006',
+        src: galleryImage7,
+        alt: 'Halal Bihalal',
+        caption:
+          'Siswa-siswi melakukan halal bihalal dengan guru SMP PLUS AT-THAHIRIN',
+      },
+
+      {
+        id: 'p009',
+        src: galleryImage10,
+        alt: 'Photo Bersama Angkatan 18',
+        caption: 'Siswa-siswi photo bersama sebelum melakukan kelulusan',
       },
       // Tambahkan objek foto lainnya sesuai dengan gambar yang Anda siapkan
     ],

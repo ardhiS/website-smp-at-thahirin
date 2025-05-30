@@ -23,7 +23,6 @@ function App() {
         {/* 1. Pembungkus utama untuk flex layout */}
         <Navbar />
         <main className='app-main-content'>
-          {' '}
           {/* 2. Main content yang akan flex-grow */}
           <Routes>
             {/* 3. Bungkus setiap halaman normal dengan div.container */}
