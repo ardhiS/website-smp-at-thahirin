@@ -11,14 +11,15 @@ import PpdbPage from './pages/PpdbPage/PpdbPage';
 import GalleryPage from './pages/GalleryPage/GalleryPage';
 import ContactPage from './pages/ContactPage/ContactPage';
 import NotFoundPage from './pages/NotFoundPage/NotFoundPage';
+import ScrollToTop from './components/scrollToTop';
 
 import './App.css';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className='app-layout'>
-        {' '}
         {/* 1. Pembungkus utama untuk flex layout */}
         <Navbar />
         <main className='app-main-content'>

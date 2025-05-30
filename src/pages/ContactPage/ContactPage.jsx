@@ -76,7 +76,10 @@ const ContactPage = () => {
       {/* BAGIAN FORMULIR KONTAK */}
       <section className='contact-form-section'>
         <div className='container-content'>
-          <h3 className='contact-sub-heading'>Kirim Pesan Langsung</h3>
+          <div className='container__contact-sub-heading'>
+            <h3 className='contact-sub-heading'>Kirim Pesan Langsung</h3>
+          </div>
+
           <form className='contact-form' onSubmit={handleSubmit}>
             <div className='form-group'>
               <label htmlFor='name'>Nama Lengkap</label>
